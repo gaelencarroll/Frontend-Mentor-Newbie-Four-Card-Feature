@@ -1,0 +1,130 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --font-family: 'Poppins', sans-serif;
+    --icon-size: 60px;
+}
+
+body{
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    font-size: 15px;
+    color: var(--very-dark-blue);
+    font-weight: 400;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.header-title{
+    font-weight: 200;
+    font-size: 28px;
+    margin: 0;
+}
+
+.header-sub-title{
+    font-size: 28px;
+    margin: 0;
+}
+
+.header-description{
+    font-weight: 200;
+    width: 35%;
+    text-align: center;
+    color: var(--grayish-blue);
+}
+
+.articles-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.column{
+    flex: 1;
+    padding: 15px;
+}
+
+.article{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px hsla(229, 6%, 66%,0.5);
+}
+
+.title{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.descrip{
+    color: var(--grayish-blue);
+}
+
+.supervisor.article{
+    border-top: 5px solid var(--cyan);
+}
+.team-builder.article{
+    border-top: 5px solid var(--red);
+}
+.karma.article{
+    border-top: 5px solid var(--orange);
+    margin-top: 30px;
+}
+.calculator.article{
+    border-top: 5px solid var(--blue);
+}
+
+.icon{
+    height: var(--icon-size);
+    width: var(--icon-size);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: flex-end;
+    margin: 0;
+}
+
+.supervisor.icon{
+    background-image: url(./images/icon-supervisor.svg);
+}
+.team-builder.icon{
+    background-image: url(./images/icon-team-builder.svg);
+}
+.karma.icon{
+    background-image: url(./images/icon-karma.svg);
+}
+.calculator.icon{
+    background-image: url(./images/icon-calculator.svg);
+}
+
+@media screen and (max-width: 375px){
+
+    .header-section{
+        text-align: center;
+    }
+    .articles-section{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .header-description{
+        width: 80%;
+    }
+}
